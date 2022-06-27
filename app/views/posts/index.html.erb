@@ -1,0 +1,12 @@
+<section class="container">
+  <h1 class="p-4">Blog Posts</h1>
+  <% @posts.each do |post|  %>
+    <div class="mb-2 bg-secondary text-white rounded" style="height:150px">
+      <div class="p-3">
+          <h3> <%= post.title%>  </h3>
+          <p> <%= post.body%> </p>
+          <%= link_to "Read More", post_path(post), class:"btn btn-warning"%>
+      </div>
+    </div>
+  <% end %>
+</section>
